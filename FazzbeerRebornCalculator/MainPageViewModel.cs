@@ -76,6 +76,7 @@ namespace FazzbeerRebornCalculator
 
         private void ExecuteAdd(string parameter)
         {
+            AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
             audioPlayerViewModel.PlayAudio("buttonSound.mp3", false, 1);
             
             switch (parameter)
