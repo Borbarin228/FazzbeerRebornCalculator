@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FazzbeerRebornCalculator.MainPage"
+             xmlns:y="clr-namespace:FazzbeerRebornCalculator">
+    <ContentPage.BindingContext>
+        <y:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Image x:Name="FullscreenImage"
+               Source="C:\Users\Boris\Desktop\FazzbeerRebornCalculator\FazzbeerRebornCalculator\Resources\Images\tmp.gif"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               Aspect="Fill"
+               IsVisible="{Binding scream}" 
+               ZIndex="100"/>
+        <Image Source="C:\Users\Boris\Desktop\FazzbeerRebornCalculator\FazzbeerRebornCalculator\Resources\Images\wallpaper.jpg" Aspect="Fill"   Opacity="1"/>
+
+        <VerticalStackLayout x:Name="calculator" Padding="0" VerticalOptions="Center"  >
+
+            <Grid x:Name="Display">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+
+
+                <BoxView
+                Grid.Column="0"
+                Grid.Row="0"
+                BackgroundColor="#80808088"
+               
+                    />
+                <Label 
+                Grid.Column="0"
+                Grid.Row="0"
+                Margin="10, 0, 0, 0"
+                FontSize="50"
+                    
+                TextColor="White"
+                Text="{Binding operations}"
+                />
+                <BoxView
+                Grid.Column="1"
+                Grid.Row="0"
+                BackgroundColor="#80808088"
+               
+                    />
+                <Label 
+                Grid.Column="1"
+                Grid.Row="0"
+                Margin="20, 0, 0, 0"
+                FontSize="50"
+                TextColor="White"
+                Text="{Binding result}"
+                />
+                <Border 
+                 Grid.Column="0"
+                 Grid.Row="0"
+                 Stroke="White" 
+                 StrokeThickness="5"/>
+
+                <Border 
+                 Grid.Column="1"
+                 Grid.Row="0"
+                 Stroke="White" 
+                 StrokeThickness="5"/>
+            </Grid>
+
+            <Grid x:Name="Keyboard" >
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button 
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="7"
+                    CommandParameter="button7"
+                    Command="{Binding add}"
+                    />
+                <Button 
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="8"
+                    CommandParameter="button8"
+                    Command="{Binding add}"
+/>
+                <Button 
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="9"
+                    CommandParameter="button9"
+                    Command="{Binding add}" />
+                <Button 
+                    Grid.Column="3"
+                    Grid.Row="0"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="del"
+                    Command="{Binding delOnce}"/>
+                <Button 
+                    Grid.Column="4"
+                    Grid.Row="0"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="с"
+                    Command="{Binding clean}"/>
+                <Button 
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="4"
+                    CommandParameter="button4"
+                    Command="{Binding add}"/>
+                <Button 
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="5"
+                    CommandParameter="button5"
+                    Command="{Binding add}"/>
+                <Button 
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    BackgroundColor="#80808088"
+
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="6"
+                    CommandParameter="button6"
+                    Command="{Binding add}"/>
+                <Button 
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="+"
+                    Command="{Binding plus}"/>
+                <Button 
+                    Grid.Column="4"
+                    Grid.Row="1"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="*"
+                    Command="{Binding multipl}"/>
+                <Button 
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="1"
+                    CommandParameter="button1"
+                    Command="{Binding add}" />
+                <Button 
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="2"
+                    CommandParameter="button2"
+                    Command="{Binding add}"/>
+                <Button 
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="3"
+                    CommandParameter="button3"
+                    Command="{Binding add}"
+                    />
+                <Button 
+                    Grid.Column="3"
+                    Grid.Row="2"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="-"
+                    Command="{Binding minus}"
+                    />
+
+                <Button 
+                    Grid.Column="4"
+                    Grid.Row="2"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="/"
+                    Command="{Binding divide}"
+                    />
+
+                <Button 
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="70"
+                    TextColor="White"
+                    Text=","
+                    Command="{Binding dot}"
+                    />
+                <Button 
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    BackgroundColor="#80808088"
+                    BorderColor="White" 
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="0"
+                    CommandParameter="button0"
+                    Command="{Binding add}"
+                    />
+                <Button 
+                    Grid.Column="2"
+                    Grid.Row="4"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="-/+"
+                    Command="{Binding changeSign}"
+                    />
+                <Button 
+                    Grid.Column="3"
+                    Grid.Row="4"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="%"
+                    Command="{Binding persent}"
+                    />
+                <Button 
+                    Grid.Column="4"
+                    Grid.Row="4"
+                    BackgroundColor="#80808088"
+                    BorderColor="White"
+                    BorderWidth="3"
+                    CornerRadius="0"
+                    FontSize="50"
+                    TextColor="White"
+                    Text="="
+                    Command="{Binding equal}"
+                    />
+
+            </Grid>
+        </VerticalStackLayout>
+
+    </Grid>
+
+</ContentPage>
