@@ -73,11 +73,12 @@ namespace FazzbeerRebornCalculator
         public ICommand divide { get; }
         public ICommand persent { get; }
         public ICommand equal { get; }
+        
 
         private void ExecuteAdd(string parameter)
         {
             AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
-            audioPlayerViewModel.PlayAudio("buttonSound.mp3", false, 1);
+            audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
             
             switch (parameter)
             {
@@ -120,7 +121,7 @@ namespace FazzbeerRebornCalculator
         private async Task Screamer()
         {
             AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
-            audioPlayerViewModel.PlayAudio("tmp.mp3", false, 1);
+            audioPlayerViewModel.PlayAudio("tmp.mp3", false, 0.8);
             await Task.Delay(5500); // Ожидаем 5 секунд
             scream = true; // Устанавливаем значение
             await Task.Delay(4600);
@@ -176,6 +177,8 @@ namespace FazzbeerRebornCalculator
         }
         public string addNum(string data, string addNewString)
         {
+            AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+            audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
             if (data != "0")
             {
                 data += addNewString;
@@ -197,6 +200,8 @@ namespace FazzbeerRebornCalculator
             _scream = false;
             clean = new Command(() =>
             {
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 result = "0";
                 operations = "";
                 status = Status.None;
@@ -204,6 +209,8 @@ namespace FazzbeerRebornCalculator
             });
             delOnce = new Command(() =>
             {
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 if (result == "0") { result = "0"; }
                 else if (result.Substring(0, 1) == "-" && result.Length == 2)
                 {
@@ -222,6 +229,8 @@ namespace FazzbeerRebornCalculator
             });
             changeSign = new Command(() =>
             {
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 if (result.Substring(0, 1) == "-")
                 {
                     result = result.Substring(1, result.Length - 1);
@@ -235,6 +244,8 @@ namespace FazzbeerRebornCalculator
             });
             dot = new Command(() =>
             {
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 if (!result.Contains(",") && isChanged != false)
                 {
                     result += ",";
@@ -242,6 +253,8 @@ namespace FazzbeerRebornCalculator
             });
             plus = new Command(() =>
             {
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 if (status == Status.None)
                 {
                     operations = result + " +";
@@ -262,7 +275,8 @@ namespace FazzbeerRebornCalculator
             });
             minus = new Command(() =>
             {
-
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 if (status == Status.None)
                 {
                     operations = result + " -";
@@ -284,6 +298,8 @@ namespace FazzbeerRebornCalculator
             });
             multipl = new Command(() =>
             {
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 if (status == Status.None)
                 {
                     isChanged = true;
@@ -307,7 +323,8 @@ namespace FazzbeerRebornCalculator
             });
             divide = new Command(() =>
             {
-
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 if (status == Status.None)
                 {
                     operations = result + " /";
@@ -328,7 +345,8 @@ namespace FazzbeerRebornCalculator
             });
             persent = new Command(() =>
             {
-
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 if (status == Status.None)
                 {
                     operations = result + " %";
@@ -349,6 +367,8 @@ namespace FazzbeerRebornCalculator
             });
             equal = new Command(() =>
             {
+                AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
+                audioPlayerViewModel.PlayAudio("buttonSound.mp3", false);
                 isChanged = true;
                 operations = parseOperation(_leftOp, result, status) + " =";
                 status = Status.None;

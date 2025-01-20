@@ -16,6 +16,14 @@ namespace FazzbeerRebornCalculator
 
         }
 
+        async void onClicked(object? sender, EventArgs e){
+            if (sender is Button btn)
+            {
+                await btn.ScaleTo(0.95, 120);
+                await btn.ScaleTo(1, 120);
+            }
+        }
+
         protected override void OnSizeAllocated(double width, double height)
         {
             base.OnSizeAllocated(width, height);

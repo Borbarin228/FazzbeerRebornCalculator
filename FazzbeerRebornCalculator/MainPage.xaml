@@ -87,6 +87,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="0"
                     Grid.Row="0"
                     BackgroundColor="#80808088"
@@ -100,6 +101,7 @@
                     Command="{Binding add}"
                     />
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="1"
                     Grid.Row="0"
                     BackgroundColor="#80808088"
@@ -113,6 +115,7 @@
                     Command="{Binding add}"
 />
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="2"
                     Grid.Row="0"
                     BackgroundColor="#80808088"
@@ -125,6 +128,7 @@
                     CommandParameter="button9"
                     Command="{Binding add}" />
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="3"
                     Grid.Row="0"
                     BackgroundColor="#80808088"
@@ -136,6 +140,7 @@
                     Text="del"
                     Command="{Binding delOnce}"/>
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="4"
                     Grid.Row="0"
                     BackgroundColor="#80808088"
@@ -147,6 +152,7 @@
                     Text="с"
                     Command="{Binding clean}"/>
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="0"
                     Grid.Row="1"
                     BackgroundColor="#80808088"
@@ -159,6 +165,7 @@
                     CommandParameter="button4"
                     Command="{Binding add}"/>
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="1"
                     Grid.Row="1"
                     BackgroundColor="#80808088"
@@ -171,6 +178,7 @@
                     CommandParameter="button5"
                     Command="{Binding add}"/>
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="2"
                     Grid.Row="1"
                     BackgroundColor="#80808088"
@@ -184,6 +192,7 @@
                     CommandParameter="button6"
                     Command="{Binding add}"/>
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="3"
                     Grid.Row="1"
                     BackgroundColor="#80808088"
@@ -195,6 +204,7 @@
                     Text="+"
                     Command="{Binding plus}"/>
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="4"
                     Grid.Row="1"
                     BackgroundColor="#80808088"
@@ -206,6 +216,7 @@
                     Text="*"
                     Command="{Binding multipl}"/>
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="0"
                     Grid.Row="2"
                     BackgroundColor="#80808088"
@@ -218,6 +229,7 @@
                     CommandParameter="button1"
                     Command="{Binding add}" />
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="1"
                     Grid.Row="2"
                     BackgroundColor="#80808088"
@@ -230,6 +242,7 @@
                     CommandParameter="button2"
                     Command="{Binding add}"/>
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="2"
                     Grid.Row="2"
                     BackgroundColor="#80808088"
@@ -243,6 +256,7 @@
                     Command="{Binding add}"
                     />
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="3"
                     Grid.Row="2"
                     BackgroundColor="#80808088"
@@ -256,6 +270,7 @@
                     />
 
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="4"
                     Grid.Row="2"
                     BackgroundColor="#80808088"
@@ -269,8 +284,9 @@
                     />
 
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="0"
-                    Grid.Row="4"
+                    Grid.Row="3"
                     BackgroundColor="#80808088"
                     BorderColor="White"
                     BorderWidth="3"
@@ -281,8 +297,9 @@
                     Command="{Binding dot}"
                     />
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="1"
-                    Grid.Row="4"
+                    Grid.Row="3"
                     BackgroundColor="#80808088"
                     BorderColor="White" 
                     BorderWidth="3"
@@ -294,8 +311,9 @@
                     Command="{Binding add}"
                     />
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="2"
-                    Grid.Row="4"
+                    Grid.Row="3"
                     BackgroundColor="#80808088"
                     BorderColor="White"
                     BorderWidth="3"
@@ -306,8 +324,9 @@
                     Command="{Binding changeSign}"
                     />
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="3"
-                    Grid.Row="4"
+                    Grid.Row="3"
                     BackgroundColor="#80808088"
                     BorderColor="White"
                     BorderWidth="3"
@@ -318,8 +337,9 @@
                     Command="{Binding persent}"
                     />
                 <Button 
+                    Clicked="onClicked"
                     Grid.Column="4"
-                    Grid.Row="4"
+                    Grid.Row="3"
                     BackgroundColor="#80808088"
                     BorderColor="White"
                     BorderWidth="3"
