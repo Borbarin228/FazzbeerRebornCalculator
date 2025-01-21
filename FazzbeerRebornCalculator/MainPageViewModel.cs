@@ -121,7 +121,7 @@ namespace FazzbeerRebornCalculator
         private async Task Screamer()
         {
             AudioPlayerViewModel audioPlayerViewModel = new AudioPlayerViewModel(audioManager);
-            audioPlayerViewModel.PlayAudio("tmp.mp3", false, 0.8);
+            audioPlayerViewModel.PlayAudio("tmp.mp3", false);
             await Task.Delay(5500); // Ожидаем 5 секунд
             scream = true; // Устанавливаем значение
             await Task.Delay(4600);
